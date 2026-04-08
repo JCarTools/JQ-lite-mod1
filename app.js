@@ -1171,7 +1171,7 @@ const VoiceControl = (() => {
 
 // ── AI Ассистент (Groq) ────────────────────────────────────
 const AIChat = (() => {
-  const GROQ = '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';
+  const GROQ_KEY = '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';
   const MODEL    = 'llama-3.3-70b-versatile';
   const SYSTEM   = `Ты голосовой ассистент в автомобиле Jaecoo J7. Отвечай кратко и по делу — водитель за рулём. Максимум 2-3 предложения если не просят подробнее. Говори по-русски. Можешь помочь с маршрутами, советами по вождению, погодой, общими вопросами.`;
 
@@ -1313,7 +1313,7 @@ const AIChat = (() => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${GROQ}`
+          'Authorization': `Bearer ${GROQ_KEY}`
         },
         body: JSON.stringify({
           model: MODEL,
